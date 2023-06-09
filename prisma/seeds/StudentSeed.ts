@@ -2,22 +2,15 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-interface StudentData {
-  // Define student data interface
-}
-
-export default async function studentSeed() {
-  // Implement student seed logic
-}
-
-export async function runStudentSeed() {
-  try {
-    await studentSeed();
-    console.log("Student seed completed.");
-  } catch (e) {
-    console.error("Error in student seed:", e);
-    process.exit(1);
-  } finally {
-    await prisma.$disconnect();
+const studentSeeder = async (numStudents:any) => {
+  for (let i = 0; i < numStudents; i++) {
+    // const student = await prisma.student.create({
+    //   data: {
+    //     scholarshipId:
+    //   },
+    // });
+    // console.log(`Inserted student: ${student.name}`);
   }
-}
+};
+
+export default studentSeeder;

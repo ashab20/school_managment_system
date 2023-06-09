@@ -1,4 +1,4 @@
-import ErrorHandler from "../utils/errorHandler";
+import ErrorHandler from "@utils/errorHandler";
 import { Request, Response, NextFunction } from "express";
 
 export default (err: any, req: Request, res: Response, next: NextFunction) => {

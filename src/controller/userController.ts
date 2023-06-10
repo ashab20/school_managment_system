@@ -1,6 +1,6 @@
+import ErrorHandler from "@utils/errorHandler";
 import { Request, Response, NextFunction } from "express";
 import asyncMiddleware from "@middleware/asyncMiddleare";
-import ErrorHandler from "@utils/errorHandler";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

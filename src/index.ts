@@ -14,13 +14,14 @@ import { PrismaClient } from "@prisma/client";
 const app = express();
 const prisma = new PrismaClient();
 
+config();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-console.log("ok");
 
-config();
+
 
 // unhandle cought error
 process.on("uncaughtException", (err) => {
@@ -32,7 +33,7 @@ process.on("uncaughtException", (err) => {
 });
 
 // Module scufholding
-const port = process.env.APP_PORT;
+const port = process.env.APP_PORT || 4000;
 
 console.log(port);
 // Listening to servr
